@@ -3,9 +3,10 @@ var lettersGlobal = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l",
 var wordsGlobal = ["pig", "cow"];
 
 var cow = lettersGlobal[2] + lettersGlobal[14] + lettersGlobal[22];
-var pig = lettersGlobal[15] + lettersGlobal[8] + lettersGlobal[6];
+
 
 	var chances = 6;
+	var reset;
 
 	var p = false;
 	var i = false;
@@ -17,11 +18,12 @@ return x;
 }
 
 document.write(resetEquation()); */
+	
+var pig = lettersGlobal[15] + lettersGlobal[8] + lettersGlobal[6]
 
-
-
-	document.onkeydown = function keyUp(event) {
-
+	document.onkeydown = function keyUp(event) {	
+			 
+		
 
 	 if (event.key === lettersGlobal[15]) {
 		document.getElementById("spot1").innerHTML = "p";
@@ -38,6 +40,8 @@ document.write(resetEquation()); */
 		}
 		else {
 			chances--;
+
+
 				if (chances === 5) {
 					document.getElementById("wb1").innerHTML = event.key;
 					document.getElementById("image1").src = "assets/images/hangman2.jpg";
@@ -64,9 +68,11 @@ document.write(resetEquation()); */
 				document.getElementById("message").innerHTML = "You Lose!";
 			}
 		}
-		
+				
 		if ((p === true)&&(i === true)&&(g === true)) {
 			document.getElementById("message").innerHTML = "You Win!";
 		}
-	 }
+
+	}
+	
 	
