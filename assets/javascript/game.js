@@ -18,12 +18,17 @@ return x;
 }
 
 document.write(resetEquation()); */
-	
+
+//Josh's commit: Resets game by refreshing page
+function updatePage(){
+	window.location.reload();
+}
+
 var pig = lettersGlobal[15] + lettersGlobal[8] + lettersGlobal[6]
 
-	document.onkeydown = function keyUp(event) {	
-			 
-		
+	document.onkeydown = function keyUp(event) {
+
+
 
 	 if (event.key === lettersGlobal[15]) {
 		document.getElementById("spot1").innerHTML = "p";
@@ -61,18 +66,16 @@ var pig = lettersGlobal[15] + lettersGlobal[8] + lettersGlobal[6]
 				if (chances === 1) {
 					document.getElementById("wb5").innerHTML = event.key;
 					document.getElementById("image1").src = "assets/images/hangman6.jpg";
-				}		
+				}
 			if (chances === 0) {
 				document.getElementById("wb6").innerHTML = event.key;
 				document.getElementById("image1").src = "assets/images/hangman7.jpg";
 				document.getElementById("message").innerHTML = "You Lose!";
 			}
 		}
-				
+
 		if ((p === true)&&(i === true)&&(g === true)) {
 			document.getElementById("message").innerHTML = "You Win!";
 		}
 
 	}
-	
-	
